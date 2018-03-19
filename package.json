@@ -1,0 +1,24 @@
+{
+  "name": "webusb-fun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-process-hrtime": "^0.1.2",
+    "firmata": "^0.19.1",
+    "johnny-five": "^0.14.1",
+    "level-fs-browser": "^1.0.0",
+    "oled-font-5x7": "^1.0.1",
+    "oled-js": "^4.0.5",
+    "webusb-serial": "https://github.com/noopkat/webusb-serial#71b5c5478b70c37fc3c32be0aa915c7576eeab39"
+  },
+  "browser": {
+    "fs": "level-fs-browser"
+  }
+}

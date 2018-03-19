@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-
-<head>
-    <title>oledjs-designer</title>
-    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet"> 
-    <link href="style.css" type="text/css" rel="stylesheet" />
-</head>
-
-<body>
-    <div id="screen">
-    </div>
-    <div id="controls">
-        <h1>oled.js Designer</h1>
-    <BR> OLED width:
-    <select id="oledsize">
-        <option value="128x64">128 x 64</option>
-        <option value="128x32">128 x 32</option>
-        <option value="96x16">96 x 16</option>
-        <option value="64x48">64 x 48</option>
-    </select>
- | Tool: <select id="tool">
-        <option value="draw">Pencil</option>
-        <option value="eraser">Eraser</option>
-    </select>
- | <button id="clear">Clear all</button>
-    <BR><BR>
-    <button disabled>Upload image (.png)</button> Upload image buffer (.js.txt): <input type="file" id="uploadjs" />
-    <BR>
-    <BR>
-    <button id="addframe" disabled>Add animation frame</button>
-    <BR><BR>
-    <button id="download">Save image buffer (.js.txt)</button>
-    </div>
-    <script src="lib/file-saver/FileSaver.min.js"></script>
-    <script src="script.js"></script>
-</body>
-
+<html>
+  <head>
+      <title>webUSB OLED + Feather demo</title>
+      <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+      <div id="screen">
+      </div>
+      <div id="controls">
+        <div class="row">
+           OLED width:
+          <select id="oledsize">
+              <option value="128x64">128 x 64</option>
+              <option value="128x32">128 x 32</option>
+              <option value="96x16">96 x 16</option>
+              <option value="64x48">64 x 48</option>
+          </select>
+        Tool: <select id="tool">
+              <option value="draw">Pencil</option>
+              <option value="eraser">Eraser</option>
+          </select>
+        <button id="clear">Clear all</button>
+       </div>
+      <div class="row">
+        Upload image frame: <input type="file" id="uploadjs" />
+        <!--<button id="download">Save image buffer (.js.txt)</button>-->
+      </div>
+        <div class="row">
+          <button id="connectWebUSB">Connect</button>
+          <button id="disconnectWebUSB">Disconnect</button>
+          <button id="sendWebUSB">Send image</button>
+        </div>
+      </div>
+      <script src="lib/file-saver/FileSaver.min.js"></script>
+      <script src="script.js"></script>
+      <script src="dist/webusb.bundle.js"></script>
+  </body>
 </html>
