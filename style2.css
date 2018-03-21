@@ -1,0 +1,127 @@
+body {
+  font-family: sans-serif;
+ /*background: linear-gradient(to right, red, orange 20%, yellow 40%, green 60%, blue 68%, purple 100%);*/
+ background: linear-gradient(to right, #ff000052, #ffa50082 20%,  #ffff0082 40%,  #00800085 60%,  #0000ff82 68%,  #80008087 100%);
+ background-size: cover;
+ background-repeat: none;
+  
+}
+
+#wrapper {
+  display: flex;
+  width: 1600px;
+}
+
+#wrapper > div {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+#wrapper > div > p {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+canvas {
+  display: none;
+}
+
+img {
+  width: 800px;
+}
+
+#or {
+  padding: 0px 30px 0px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+form {
+  padding: 10px 0px 20px 0px;
+}
+
+.group {
+  display: inline-block;
+  background-color: #eee;
+  padding: 9px 11px;
+  border-radius: 4px;
+}
+
+select {
+  width: 150px;
+  height: 28px;
+  font-size: 15px;
+}
+
+input[type='text'] {
+  width: 375px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-right: 11px;
+}
+
+input[type='submit'] {
+  background-color: #94e1ac;
+  border: 1px solid #80c495;
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+label > button {
+  background-color: #acd3f6;
+  border: 1px solid #7998b4;
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#connectWebUSB, #disconnectWebUSB, #sendWebUSB, #clear  {
+  background-color: #acd3f6;
+  border: 1px solid #7998b4;
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type='file'] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+input[type='file']:focus {
+  outline: 3px solid #0000ff;
+  border: 3px solid #0000ff;
+}
+
+#filename {
+  min-width: 175px;
+  max-width: 175px;
+  max-height: 20px;
+  font-size: 12px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-overflow: ellipsis; 
+}
+

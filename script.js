@@ -35,6 +35,17 @@ document.getElementById("oledsize").addEventListener("change", function (e) {
     else { drawOLED(64, 48); }
 });
 
+//a11y for custom file upload element
+var fileButton = document.getElementById("filebutton");
+var fileInput = document.getElementById("uploadjs");
+var fileName = document.getElementById("filename");
+fileButton.addEventListener('click', () => fileInput.click());
+
+fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  fileName.textContent = file.name;
+});
+
 // Handler for tool change
 document.getElementById("tool").addEventListener("change", function(e){
     if (document.getElementById("tool").value == "draw") { tool = "draw" }

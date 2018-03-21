@@ -3,12 +3,14 @@
   <head>
       <title>webUSB OLED + Feather demo</title>
       <link href="style.css" type="text/css" rel="stylesheet" />
+      <link href="style2.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
       <div id="screen">
       </div>
       <div id="controls">
         <div class="row">
+        <label>
            OLED width:
           <select id="oledsize">
               <option value="128x64">128 x 64</option>
@@ -16,14 +18,21 @@
               <option value="96x16">96 x 16</option>
               <option value="64x48">64 x 48</option>
           </select>
+          </label>
+          <label>
         Tool: <select id="tool">
               <option value="draw">Pencil</option>
               <option value="eraser">Eraser</option>
           </select>
+          </label>
         <button id="clear">Clear all</button>
        </div>
       <div class="row">
-        Upload image frame: <input type="file" id="uploadjs" />
+      <label>
+         <button id="filebutton" type="button" aria-controls="uploadjs">Upload image frame</button>
+          <input type="file" id="uploadjs"  tabindex="-1"/>        </label>
+          <span id="filename"></span>
+
         <!--<button id="download">Save image buffer (.js.txt)</button>-->
       </div>
         <div class="row">
