@@ -46793,8 +46793,8 @@ function onDisconnect() {
   board.io.reset();
   port.close();
   connectButton.style.display = 'inline';
-  disconnectButton.style.display = 'none';
-  sendButton.style.display = 'none';
+ // disconnectButton.style.display = 'none';
+//  sendButton.style.display = 'none';
   io = null;
   board = null;
   port = null;
@@ -46833,8 +46833,8 @@ function onBoardReady(board) {
 
   const oledOptions = {
     width: 128,
-    height: 64,
-    address: 0x3D,
+    height: 32,
+    address: 0x3C,
     resetPin: 12 
   };
 
@@ -46863,13 +46863,13 @@ function setUpWebUSB() {
     port.init()
       .then(() => resolve(port))
       .catch((error) => reject(error));
+   
     
-   /* 
     port.on('open', () => console.log('device opened'));
     port.on('emit', console.log);
     port.on('error', console.log);
     port.on('data', console.log);
-  */
+  
   });
 }
 
